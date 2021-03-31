@@ -17,6 +17,7 @@ body {
   font-size: 24px;
   text-align: center;
   color: #fff;
+  flex-grow: 1;
 }
 
 .sloupec:nth-child(1) {
@@ -27,6 +28,17 @@ body {
 }
 .sloupec:nth-child(3) {
   background-color: #2ecc71;
+}
+
+.kontejner {
+  flex-direction: column;
+  display: flex;
+}
+
+@media screen and (min-width: 800px) {
+  .kontejner {
+    flex-direction: row;
+  }
 }
 
 /*
