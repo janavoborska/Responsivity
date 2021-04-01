@@ -1,8 +1,12 @@
 /* intuitivnejsi box-sizing */
-*, :after, :before { box-sizing: border-box; }
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
 
 body {
-	font: 24px/1 sans-serif;
+  font: 24px/1 sans-serif;
 }
 
 /* ---------------------------------------------------- */
@@ -14,30 +18,84 @@ body {
 	- 1000px
 */
 
-
 /*
 	Jsem na tebe hodný a už jsem ti připravil
 	základní styl pro logo a pro odkazy.
 */
 .hlavicka {
-	padding: 10px;
-	border: 1px solid silver;
+  padding: 10px;
+  border: 1px solid silver;
 }
 
 .logo {
-	font-weight: bold;
-	text-align: center;
+  font-weight: bold;
+  text-align: center;
 }
 
 a {
-	text-decoration: none;
-	background-color: #f0f0f0;
-	color: #e74c3c;
-	display: block;
-	padding: 10px 20px;
+  text-decoration: none;
+  background-color: #f0f0f0;
+  color: #e74c3c;
+  display: block;
+  padding: 10px 20px;
 }
 
 a:hover {
-	background-color: #e74c3c;
-	color: white;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.menu li {
+  display: block;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.hlavicka {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo,
+.menu {
+  width: 100%;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 640px) {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu li {
+    width: calc(25% - 2px);
+    margin-left: 2px;
+  }
+
+  ul:first-child {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hlavicka {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    text-align: left;
+    margin-top: 10px;
+  }
 }
