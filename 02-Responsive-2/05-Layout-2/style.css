@@ -57,3 +57,41 @@ aside > :last-child {
 	- 640px
 	- 1000px
 */
+
+.obsah {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 640px) {
+  .obsah {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .clanek {
+    width: 70%;
+  }
+
+  .menu {
+    width: 30%;
+  }
+
+  .reklama {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .clanek {
+    width: 60%;
+  }
+
+  .menu {
+    width: 20%;
+  }
+
+  .reklama {
+    width: 20%;
+  }
+}
